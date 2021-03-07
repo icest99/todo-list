@@ -130,7 +130,7 @@ function App() {
         <Grid item style={{ textAlign: "left" }}>
           <Paper
             className={classes.paper}
-            style={{ minWidth: "17vw", maxWidth: "50vw", overflowY: "hidden" }}
+            style={{ minWidth: "17vw", maxWidth: "17vw", overflowY: "hidden" }}
           >
             What to do!
             <Divider />
