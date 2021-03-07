@@ -128,7 +128,10 @@ function App() {
           </Paper>
         </Grid>
         <Grid item style={{ textAlign: "left" }}>
-          <Paper className={classes.paper} style={{ minWidth: "17vw" }}>
+          <Paper
+            className={classes.paper}
+            style={{ minWidth: "17vw", maxWidth: "50vw", overflowY: "hidden" }}
+          >
             What to do!
             <Divider />
             <TodoList todos_state={todos} toggleTodo={toggleTodo} />
