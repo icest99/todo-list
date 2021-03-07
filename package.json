@@ -1,6 +1,6 @@
 {
-  "name": "quote-machine",
-  "homepage": "https://github.com/icest99/todo-list",
+  "name": "todo-list",
+  "homepage": "https://icest99.github.io/todo-list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
