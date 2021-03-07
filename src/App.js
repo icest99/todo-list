@@ -74,7 +74,6 @@ function App() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      TEST
       <Grid
         container
         direction="column"
@@ -131,7 +130,7 @@ function App() {
         <Grid item style={{ textAlign: "left" }}>
           <Paper
             className={classes.paper}
-            style={{ minWidth: "17vw", maxWidth: "17vw", overflowY: "hidden" }}
+            style={{ minWidth: "17vw", maxWidth: "80vw", overflowY: "hidden" }}
           >
             What to do!
             <Divider />
