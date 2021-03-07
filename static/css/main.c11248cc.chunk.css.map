@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/todoList.css"],"names":[],"mappings":"AAAA,SACE,iBAAkB,CAClB,iBACF","file":"main.c11248cc.chunk.css","sourcesContent":["#wrapper {\r\n  overflow-x: hidden;\r\n  overflow-y: hidden;\r\n}\r\n"]}
