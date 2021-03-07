@@ -74,61 +74,66 @@ function App() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      IS iT WORKING?
       <Grid
         container
-        direction="rows"
+        direction="column"
         justify="center"
         alignItems="center"
+        spacing={3}
         style={{ height: "100vh" }}
       >
-        <Paper className={classes.paper} style={{ textAlign: "center" }}>
-          <Grid item xs={12} style={{ textAlign: "center" }}>
-            <TextField
-              id="standard-basic"
-              label="Enter tasks!"
-              inputRef={todoNameRef}
-              id="input-text"
-              type="text"
-            />
-            {/* <input ref={todoNameRef} type="text" id="input-text" /> */}
-          </Grid>
-          <Grid item>
-            <Tooltip title="Add task">
-              <Button
-                variant="outlined"
-                color="secondary"
-                onClick={handleAddToDo}
-                disableElevation
-              >
-                <AddIcon />
-              </Button>
-            </Tooltip>
-            <Tooltip title="Clear completed task">
-              <Button
-                variant="outlined"
-                color="primary"
-                onClick={handleClearTodo}
-                disableElevation
-              >
-                <DeleteIcon />
-              </Button>
-            </Tooltip>
-          </Grid>
-          <Grid item style={{ textAlign: "center" }}>
-            <div>
-              {todos.filter((each) => each.complete !== true).length} left to
-              do!
-            </div>
-          </Grid>
-        </Paper>
-        <Paper className={classes.paper}>
-          <Grid item style={{ textAlign: "left" }}>
+        <Grid item>
+          <Paper
+            className={classes.paper}
+            style={{ textAlign: "center", minWidth: "17vw" }}
+          >
+            <Grid item xs={12} style={{ textAlign: "center" }}>
+              <TextField
+                id="standard-basic"
+                label="Enter tasks!"
+                inputRef={todoNameRef}
+                id="input-text"
+                type="text"
+              />
+              {/* <input ref={todoNameRef} type="text" id="input-text" /> */}
+            </Grid>
+            <Grid item xs={12}>
+              <Tooltip title="Add task">
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  onClick={handleAddToDo}
+                  disableElevation
+                >
+                  <AddIcon />
+                </Button>
+              </Tooltip>
+              <Tooltip title="Clear completed task">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  onClick={handleClearTodo}
+                  disableElevation
+                >
+                  <DeleteIcon />
+                </Button>
+              </Tooltip>
+            </Grid>
+            <Grid item xs={12} style={{ textAlign: "center" }}>
+              <div>
+                {todos.filter((each) => each.complete !== true).length} left to
+                do!
+              </div>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item style={{ textAlign: "left" }}>
+          <Paper className={classes.paper} style={{ minWidth: "17vw" }}>
             What to do!
             <Divider />
             <TodoList todos_state={todos} toggleTodo={toggleTodo} />
-          </Grid>
-        </Paper>
+          </Paper>
+        </Grid>
       </Grid>
     </div> // this </> is called fragment
   );
